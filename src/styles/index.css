@@ -16,7 +16,7 @@
 
 .page-w {
   width: 50%;
-  min-width: 600px;
+  min-width: 375px;
 }
 
 .page {
@@ -43,6 +43,10 @@
     flex-direction: row;
     gap: 10px;
     align-items: flex-end;
+}
+
+.column-flex {
+  align-items: center;
 }
 
 .profession, .player {
