@@ -1,4 +1,4 @@
-import "./styles/index.css";
+import "./src/styles/index.css";
 
 const income = document.querySelector(".income");
 
