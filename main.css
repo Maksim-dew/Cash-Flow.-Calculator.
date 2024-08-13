@@ -1,0 +1,267 @@
+
+* {
+  scroll-behavior: smooth;
+}
+
+
+.header-name {
+  margin: 20px;
+  text-align: center;
+}
+
+.main {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.page-w {
+  width: 50%;
+  min-width: 600px;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* шапка */
+.name-section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.shadow {
+  margin-left: 10px;
+  box-shadow: -10px -5px  red;
+}
+
+.profession, .player, .auditor {
+  display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.column-flex {
+  align-items: center;
+}
+
+.profession, .player {
+  margin-bottom: 15px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.output {
+  display: flex;
+  width: 100%;
+  border: 0px;
+  font-size: 16px;
+  border-bottom: 2px solid black;
+  margin-top: 25px;
+}
+
+.input, .field-input {
+  width: 100%;
+  border: 0px;
+  font-size: 16px;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+
+.input:focus, .field-input:focus {
+  outline: 0px;
+}
+
+.input {
+  border-bottom: 2px solid black;
+}
+
+.small-text {
+  font-size: 12px;
+  text-align: center;
+  margin: 0px;
+}
+
+.text-medium {
+  font-size: 16px;
+}
+
+/*  */
+
+.text-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  width: 270px;
+}
+
+.field {
+display: flex;
+
+}
+.income {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  margin-bottom:  25px;
+}
+
+.column-name {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  min-width: 370px;
+  height: 55px;
+}
+
+.field-block{
+  display: flex;
+  flex-direction: column;
+}
+.column1, .column2 {
+  display: flex;
+  min-height: 55px;
+  border-bottom: 1px solid black;
+  padding-left: 5px;
+
+}
+
+.column1 {
+  min-width: 222px;
+  border-right: 1px solid black;
+}
+
+.column1, .column1-field {
+  border-left: 1px solid black;
+}
+
+.column2 {
+  min-width: 128px;
+  width: 100%;
+  border-right: 1px solid black;
+}
+
+.col-name, .col-div {
+  background-color: #8D8D8D;
+}
+
+/* */
+
+.col-div {
+  margin-top: 25px;
+  margin-left: 12px;
+  box-shadow: -10px -10px  black;
+}
+
+.passive-income, .total-income {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number-of-children, .expenses-of-children {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 25px;
+}
+
+.children {
+  width: 200px;
+  margin: 10px;
+}
+
+.total-consumption, .monthly-income {
+  margin-top: 25px;
+}
+
+.monthly-income-div {
+  margin-top: 20px;
+}
+
+.field-assets {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.text-field-name {
+  margin: 0px;
+}
+
+.field-assets-input {
+  margin: 0px;
+  border-bottom: 0px;
+  margin-left: 5px;
+  padding: 0px;
+}
+
+.column1-field {
+  min-width: 350px;
+}
+
+.column1-field, .column2-field, .column3-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  border-bottom: 1px solid black;
+}
+
+.column2-field, .column3-field {
+  min-width: 50px;
+  width: 100%;
+  border-left: 0.5px solid black;
+}
+.column3-field {
+  border-right: 1px solid black;
+}
+.liabilities {
+  margin-top: 15px;
+}
+
+.button {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 100%;
+  min-width: 375px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-size: 32px;
+}
+
+.button-field-input {
+  width: 30%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.column-button {
+  display: flex;
+  align-items: center;
+}
