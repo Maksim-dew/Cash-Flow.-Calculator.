@@ -101,18 +101,20 @@ function updateOutput() {
   const resmonthlyIncome = res - resTotalConsumptionInput;
   document.querySelector(".monthly-income").textContent = resmonthlyIncome;
   console.log("Денежный поток" + resmonthlyIncome);
+
+  //кредит банка
+  const bankLoan =
+    parseFloat(document.querySelector(".bank-loan").value) || 0; // Расчет процентов кредита
+
+  // const percentagesBank = bankLoan;
+
+  document.querySelector(".bank-loan-payment").textContent = bankLoan;
+  
 }
 
 
 
 const inputsExpenses = document.querySelectorAll('input[name="name-expenses"]');
-// inputsExpenses.forEach((input) => {
-//   input.addEventListener("focus", (event) => {
-//     event.target.value = "";
-//   });
-// });
-
-// Обновление данных при изменении поля
 inputsExpenses.forEach((input) => {
   input.addEventListener("change", updateOutput);
 });
@@ -131,15 +133,6 @@ function buttonDell () {
   const buttonField_6 = document.querySelector(".button-field-input-6");
   const buttonField_7 = document.querySelector(".button-field-input-7");
   const buttonField_8 = document.querySelector(".button-field-input-8");
-
-  // const mortgageHouse =  parseFloat(document.querySelector(".mortgage-house").value) || 0;
-  // const creditEducation= parseFloat(document.querySelector(".credit-for-education").value) || 0;
-  // const carLoan = parseFloat(document.querySelector(".car-loan").value) || 0;
-  // const creditCardDebt = parseFloat(document.querySelector(".credit-card-debt").value) || 0;
-  // const retailDebt = parseFloat(document.querySelector(".retail-debt").value) || 0;
-  // const onMortgages = parseFloat(document.querySelector(".on-mortgages").value) || 0;
-  // const liabilities = parseFloat(document.querySelector(".liabilities").value) || 0;
-  // const bankLoan = parseFloat(document.querySelector(".bank-loan").value) || 0;
 
   //Закладная на дом
   buttonField_1.addEventListener("click", () => {
@@ -185,5 +178,110 @@ function buttonDell () {
   
 }
 
+function clear () {
+  const buttonFieldActive_1 = document.querySelector(".button-field-input-active-1");
+  const buttonFieldActive_2 = document.querySelector(".button-field-input-active-2");
+  const buttonFieldActive_3 = document.querySelector(".button-field-input-active-3");
+  const buttonFieldActive_4 = document.querySelector(".button-field-input-active-4");
+  const buttonFieldActive_5 = document.querySelector(".button-field-input-active-5");
+  const buttonFieldActive_6 = document.querySelector(".button-field-input-active-6");
+  const buttonFieldActive_7 = document.querySelector(".button-field-input-active-7");
+  const buttonFieldActive_8 = document.querySelector(".button-field-input-active-8");
+  const buttonFieldActive_9 = document.querySelector(".button-field-input-active-9");
+  const buttonFieldActive_10 = document.querySelector(".button-field-input-active-10");
+  const buttonFieldActive_11 = document.querySelector(".button-field-input-active-11");
+  const buttonFieldActive_12 = document.querySelector(".button-field-input-active-12");
+
+  buttonFieldActive_1.addEventListener("click", () => {
+    document.querySelector(".stocks-1").value = " ";
+    document.querySelector(".number-shares-1").value = " ";
+    document.querySelector(".price-1").value = " ";
+    updateOutput();
+  });
+
+  buttonFieldActive_2.addEventListener("click", () => {
+    document.querySelector(".stocks-2").value = "";
+    document.querySelector(".number-shares-2").value = "";
+    document.querySelector(".price-2").value = "";
+    updateOutput();
+  });
+
+  buttonFieldActive_3.addEventListener("click", () => {
+    document.querySelector(".stocks-3").value = "";
+    document.querySelector(".number-shares-3").value = "";
+    document.querySelector(".price-3").value = "";
+    updateOutput();
+  });
+
+  buttonFieldActive_4.addEventListener("click", () => {
+    document.querySelector(".stocks-4").value = "";
+    document.querySelector(".number-shares-4").value = "";
+    document.querySelector(".price-4").value = "";
+    updateOutput();
+  });
+
+  //
+
+  buttonFieldActive_5.addEventListener("click", () => {
+    document.querySelector(".realty-1").value = "";
+    document.querySelector(".first-installment-realty-1").value = "";
+    document.querySelector(".first-installment-price-1").value = "";
+    updateOutput();
+  });
+
+  buttonFieldActive_6.addEventListener("click", () => {
+    document.querySelector(".realty-2").value = "";
+    document.querySelector(".first-installment-realty-2").value = "";
+    document.querySelector(".first-installment-price-2").value = "";
+    updateOutput();
+  });
+
+  buttonFieldActive_7.addEventListener("click", () => {
+    document.querySelector(".realty-3").value = "";
+    document.querySelector(".first-installment-realty-3").value = "";
+    document.querySelector(".first-installment-price-3").value = "";
+    updateOutput();
+  });
+
+  buttonFieldActive_8.addEventListener("click", () => {
+    document.querySelector(".realty-4").value = "";
+    document.querySelector(".first-installment-realty-4").value = "";
+    document.querySelector(".first-installment-price-4").value = "";
+    updateOutput();
+  });
+
+  //
+
+  buttonFieldActive_9.addEventListener("click", () => {
+    document.querySelector(".business-1").value = "";
+    document.querySelector(".first-installment-business-1").value = "";
+    document.querySelector(".first-installment-business-price-1").value = "";
+    updateOutput();
+  });
+
+  buttonFieldActive_10.addEventListener("click", () => {
+    document.querySelector(".business-2").value = "";
+    document.querySelector(".first-installment-business-2").value = "";
+    document.querySelector(".first-installment-business-price-2").value = "";
+    updateOutput();
+  });
+
+  buttonFieldActive_11.addEventListener("click", () => {
+    document.querySelector(".business-3").value = "";
+    document.querySelector(".first-installment-business-3").value = "";
+    document.querySelector(".first-installment-business-price-3").value = "";
+    updateOutput();
+  });
+
+  buttonFieldActive_12.addEventListener("click", () => {
+    document.querySelector(".business-4").value = "";
+    document.querySelector(".first-installment-business-4").value = "";
+    document.querySelector(".first-installment-business-price-4").value = "";
+    updateOutput();
+  });
+
+}
+
+clear ();
 updateOutput();
 buttonDell ();

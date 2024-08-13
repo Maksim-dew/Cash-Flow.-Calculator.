@@ -215,7 +215,7 @@ display: flex;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 25px;
+  min-height: 50px;
   border-bottom: 1px solid black;
 }
 
