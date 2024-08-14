@@ -1,8 +1,6 @@
-
 * {
   scroll-behavior: smooth;
 }
-
 
 .header-name {
   margin: 20px;
@@ -25,7 +23,6 @@
   align-items: center;
 }
 
-
 /* шапка */
 .name-section {
   display: flex;
@@ -35,50 +32,70 @@
 
 .shadow {
   margin-left: 10px;
-  box-shadow: -10px -5px  red;
+  box-shadow: -10px -5px red;
 }
 
-.profession, .player, .auditor {
+.profession,
+.player,
+.auditor {
   display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
 }
 
 .column-flex {
   align-items: center;
 }
 
-.profession, .player {
+.profession,
+.player {
   margin-bottom: 15px;
 }
 
 .center {
   display: flex;
-  align-items: center;
   flex-direction: column;
   width: 100%;
+  align-items: center;
 }
 
 .output {
   display: flex;
   width: 100%;
   border: 0px;
-  font-size: 16px;
+  font-size: 20px;
   border-bottom: 2px solid black;
   margin-top: 25px;
+  text-align: center;
 }
 
-.input, .field-input {
+.input,
+.field-input {
   width: 100%;
   border: 0px;
   font-size: 16px;
   margin-left: 5px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
+.input-text {
+  font-size: 16px;
+}
 
-.input:focus, .field-input:focus {
+.output-line {
+  border: 0px;
+  margin-left: 5px;
+}
+
+.auditor-text,
+.player-text,
+.profession-text {
+  margin: 0px;
+  text-align: center;
+}
+
+.input:focus,
+.field-input:focus {
   outline: 0px;
 }
 
@@ -89,14 +106,13 @@
 .small-text {
   font-size: 12px;
   text-align: center;
-  margin: 0px;
+  margin: 10px 0 0 0;
 }
 
 .text-medium {
   font-size: 16px;
+  text-align: center;
 }
-
-/*  */
 
 .text-name {
   display: flex;
@@ -104,39 +120,41 @@
   justify-content: center;
   background-color: black;
   color: white;
-  width: 270px;
+  width: 300px;
+  margin-bottom: 15px;
 }
 
-.field {
-display: flex;
+/*  */
 
+.field {
+  display: flex;
 }
 .income {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: space-around;
-  margin-bottom:  25px;
+  margin-bottom: 25px;
 }
 
 .column-name {
   margin-top: 0px;
   margin-bottom: 0px;
   width: 100%;
-  min-width: 370px;
+  min-width: 100%;
   height: 55px;
 }
 
-.field-block{
+.field-block {
   display: flex;
   flex-direction: column;
 }
-.column1, .column2 {
+.column1,
+.column2 {
   display: flex;
   min-height: 55px;
   border-bottom: 1px solid black;
   padding-left: 5px;
-
 }
 
 .column1 {
@@ -144,18 +162,20 @@ display: flex;
   border-right: 1px solid black;
 }
 
-.column1, .column1-field {
+.column1,
+.column1-field {
   border-left: 1px solid black;
 }
 
 .column2 {
-  min-width: 128px;
+  /* min-width: 128px; */
   width: 100%;
   border-right: 1px solid black;
 }
 
-.col-name, .col-div {
-  background-color: #8D8D8D;
+.col-name,
+.col-div {
+  background-color: #8d8d8d;
 }
 
 /* */
@@ -163,17 +183,19 @@ display: flex;
 .col-div {
   margin-top: 25px;
   margin-left: 12px;
-  box-shadow: -10px -10px  black;
+  box-shadow: -10px -10px black;
 }
 
-.passive-income, .total-income {
+.passive-income,
+.total-income {
   margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.number-of-children, .expenses-of-children {
+.number-of-children,
+.expenses-of-children {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -185,12 +207,11 @@ display: flex;
   margin: 10px;
 }
 
-.total-consumption, .monthly-income {
+.total-consumption, .monthly-income-div {
+  display: flex;
   margin-top: 25px;
-}
-
-.monthly-income-div {
-  margin-top: 20px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .field-assets {
@@ -212,10 +233,12 @@ display: flex;
 }
 
 .column1-field {
-  min-width: 350px;
+  min-width: 170px;
 }
 
-.column1-field, .column2-field, .column3-field {
+.column1-field,
+.column2-field,
+.column3-field {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -223,7 +246,8 @@ display: flex;
   border-bottom: 1px solid black;
 }
 
-.column2-field, .column3-field {
+.column2-field,
+.column3-field {
   min-width: 50px;
   width: 100%;
   border-left: 0.5px solid black;
@@ -251,14 +275,15 @@ display: flex;
 
 .button-field-input {
   width: 30%;
+  min-width: 65px;
   height: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: black;
   color: white;
-  margin-right: 20px;
-  margin-left: 10px;
+  margin-right: 10px;
+  margin-left: 3px;
 }
 
 .column-button {
