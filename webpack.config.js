@@ -57,6 +57,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/page/BigCircle.html'
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin() // подключение плагина для объединения файлов
   ] 

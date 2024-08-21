@@ -14,13 +14,15 @@
 
 .page-w {
   width: 50%;
-  min-width: 375px;
+  min-width: 360px;
 }
 
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* background-image: url("../image/pattern-trigon-rhomb-shuriken.svg"); */
+  background-color: #628A81;
 }
 
 /* шапка */
@@ -32,7 +34,7 @@
 
 .shadow {
   margin-left: 10px;
-  box-shadow: -10px -5px red;
+  box-shadow: -10px -10px #F6733A;
 }
 
 .profession,
@@ -75,7 +77,8 @@
   border: 0px;
   font-size: 16px;
   margin-left: 5px;
-  margin-right: 5px;
+  text-align: center;
+  background-color:  transparent;
 }
 
 .input-text {
@@ -118,7 +121,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: #1D313C;
   color: white;
   width: 300px;
   margin-bottom: 15px;
@@ -157,9 +160,21 @@
   padding-left: 5px;
 }
 
+@media (max-width: 420px) {
+  .column1,
+  .column2 {
+
+    border-bottom: 2px solid black;
+  }
+}
+
 .column1 {
-  min-width: 222px;
+  min-width: 175px;
   border-right: 1px solid black;
+}
+
+.column1-min {
+  min-width: 190px;
 }
 
 .column1,
@@ -168,14 +183,13 @@
 }
 
 .column2 {
-  /* min-width: 128px; */
   width: 100%;
   border-right: 1px solid black;
 }
 
 .col-name,
 .col-div {
-  background-color: #8d8d8d;
+  background-color: #4FA3AB;
 }
 
 /* */
@@ -183,7 +197,7 @@
 .col-div {
   margin-top: 25px;
   margin-left: 12px;
-  box-shadow: -10px -10px black;
+  box-shadow: -10px -10px #1D313C;
 }
 
 .passive-income,
@@ -232,13 +246,14 @@
   padding: 0px;
 }
 
-.column1-field {
+/* .column1-field {
   min-width: 170px;
-}
+} */
 
 .column1-field,
 .column2-field,
 .column3-field {
+  min-width: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,6 +267,14 @@
   width: 100%;
   border-left: 0.5px solid black;
 }
+
+@media (max-width: 420px) {
+.column2-field,
+.column3-field {
+  border-left: 1px solid black;
+}
+
+}
 .column3-field {
   border-right: 1px solid black;
 }
@@ -259,18 +282,19 @@
   margin-top: 15px;
 }
 
-.button {
+.button-footer {
   margin-top: 25px;
   margin-bottom: 25px;
   width: 100%;
-  min-width: 375px;
+  min-width: 320px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: #1D313C;
   color: white;
   font-size: 32px;
+  border-radius: 5px;
 }
 
 .button-field-input {
@@ -280,10 +304,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: black;
+  background-color: #1D313C;
   color: white;
   margin-right: 10px;
   margin-left: 3px;
+  border-radius: 5px;
 }
 
 .column-button {
