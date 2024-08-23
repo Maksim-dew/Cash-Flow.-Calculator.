@@ -7,29 +7,227 @@
 </head>
 
 <body class="page">
-  <div class="name-section">
-    <div class="profession ">
-      <div class="text-name shadow">
-        <h2>Профессия:</h2>
-      </div>
-      <input pattern="^[А-Яа-яЁё\s]+$" class="profession-text input" type="text">
-    </div>
-    <div class="player ">
-      <div class="text-name shadow">
-        <h2>Игрок:</h2>
-      </div>
-      <input pattern="^[А-Яа-яЁё\s]+$" class="player-text input" type="text">
-    </div>
+  <div class="page-w">
+    <header class="header">
+      <h1 class="header-name">Поздравляем!</br> Вы выбрались из "Крысиных гонок"!</h1>
+    </header>
+    <main class="main">
+      <div class="name-section">
+        <div class="profession ">
+          <div class="text-name shadow">
+            <h2>Профессия:</h2>
+          </div>
+          <input pattern="^[А-Яа-яЁё\s]+$" class="profession-text input" type="text">
+        </div>
+        <div class="player ">
+          <div class="text-name shadow">
+            <h2>Игрок:</h2>
+          </div>
+          <input pattern="^[А-Яа-яЁё\s]+$" class="player-text input" type="text">
+        </div>
 
-    <div class="auditor">
-      <div class="text-name shadow">
-        <h2>Аудитор:</h2>
+        <div class="auditor">
+          <div class="text-name shadow">
+            <h2>Аудитор:</h2>
+          </div>
+          <div class="center">
+            <input pattern="^[А-Яа-яЁё\s]+$" class="auditor-text input" type="text">
+            <h2 class="small-text">(Игрок справа от вас)</h2>
+          </div>
+        </div>
       </div>
-      <div class="center">
-        <input pattern="^[А-Яа-яЁё\s]+$" class="auditor-text input" type="text">
-        <h2 class="small-text">(Игрок справа от вас)</h2>
+      <div class="new-pass">
+        <div class="text-name-bc">
+          <h3>Ваш новый пассивный доход</h3>
+        </div>
+        <div class="new-pass-block_1">
+          <div class="text-medium">
+            <h3>Старый пассивный доход:</h3>
+          </div>
+          <div class="center">
+            <input pattern="^[ 0-9]+$" type="number" value="0" name="name" class="input old-pass">
+          </div>
+        </div>
+        <h4 class="text-big">x100</h4>
+        <div class="new-pass-block_2">
+          <div class="text-medium">
+            <h3>Начальный пассивный доход:</h3>
+          </div>
+          <div class="center">
+            <output pattern="^[ 0-9]+$" type="number" value="0" name="name" class="output output-new-pass">
+          </div>
+        </div>
       </div>
-    </div>
+      <div class="new-pass new-pass-win">
+        <div class="text-name-bc">
+          <h3>Как выиграть:</h3>
+        </div>
+        <div class="new-pass-block_1">
+          <div class="text-medium">
+            <h3>Начальный пассивный доход:</h3>
+          </div>
+          <div class="center">
+            <output pattern="^[ 0-9]+$" type="number" value="0" name="name" class="output">
+          </div>
+        </div>
+        <h4 class="text-big">Повышаем доход на 50к</h4>
+        <div class="new-pass-block_2">
+          <div class="text-medium">
+            <h3>Требуемый пассивный доход:</h3>
+          </div>
+          <div class="center">
+            <output pattern="^[ 0-9]+$" type="number" value="0" name="name" class="output output-new-pass">
+          </div>
+        </div>
+        </div>
+        <div class="shadow text-gl">
+          <h3>Финансовый отчет:</h3>
+        </div>
+        <div class="field">
+          <div class="column1-field-bc col-name bc_1">
+            <h4 class="text-medium">Бизнес:</h4>
+          </div>
+          <div class="column2-field-bc col-name bc_2">
+            <h4 class="text-medium">Доходность бизнеса в месяц:</h4>
+          </div>
+          <div class="column3-field-bc col-name bc_3">
+            <h4 class="text-medium">Суммарный пассивный доход:</h4>
+          </div>
+        </div>
+        <div class="field">
+          <div class="column1-field-bc ">
+            <input class="field-input" type="text">
+          </div>
+          <div class="column2-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+          <div class="column3-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+        </div>
+        <div class="field">
+          <div class="column1-field-bc ">
+            <input class="field-input" type="text">
+          </div>
+          <div class="column2-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+          <div class="column3-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+        </div>
+        <div class="field">
+          <div class="column1-field-bc ">
+            <input class="field-input" type="text">
+          </div>
+          <div class="column2-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+          <div class="column3-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+        </div>
+        <div class="field">
+          <div class="column1-field-bc ">
+            <input class="field-input" type="text">
+          </div>
+          <div class="column2-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+          <div class="column3-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+        </div>
+        <div class="field">
+          <div class="column1-field-bc ">
+            <input class="field-input" type="text">
+          </div>
+          <div class="column2-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+          <div class="column3-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+        </div>
+        <div class="field">
+          <div class="column1-field-bc ">
+            <input class="field-input" type="text">
+          </div>
+          <div class="column2-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+          <div class="column3-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+        </div>
+        <div class="field">
+          <div class="column1-field-bc ">
+            <input class="field-input" type="text">
+          </div>
+          <div class="column2-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+          <div class="column3-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+        </div>
+        <div class="field">
+          <div class="column1-field-bc ">
+            <input class="field-input" type="text">
+          </div>
+          <div class="column2-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+          <div class="column3-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+        </div>
+        <div class="field">
+          <div class="column1-field-bc ">
+            <input class="field-input" type="text">
+          </div>
+          <div class="column2-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+          <div class="column3-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+        </div>
+        <div class="field">
+          <div class="column1-field-bc ">
+            <input class="field-input" type="text">
+          </div>
+          <div class="column2-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+          <div class="column3-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+        </div>
+        <div class="field">
+          <div class="column1-field-bc ">
+            <input class="field-input" type="text">
+          </div>
+          <div class="column2-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+          <div class="column3-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+        </div>
+        <div class="field">
+          <div class="column1-field-bc ">
+            <input class="field-input" type="text">
+          </div>
+          <div class="column2-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+          <div class="column3-field-bc ">
+            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+          </div>
+        </div>
+        <a href="../index.html" target="_blank" style="text-decoration: none;"><input class="button-footer" type="button" value="Назад" /></a>
+    </main>
   </div>
 </body>
 
