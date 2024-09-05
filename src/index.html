@@ -6,24 +6,24 @@
   <title>CashFlow</title>
 </head>
 
-<body class="page">
+<body class="page page-index">
   <div class="page-w">
     <header class="header">
       <h1 class="header-name">Ведомость расходов и доходов</h1>
     </header>
     <main class="main">
       <div class="name-section">
-        <div class="profession ">
+        <div class="profession">
           <div class="text-name shadow">
             <h2>Профессия:</h2>
           </div>
-          <input pattern="^[А-Яа-яЁё\s]+$" class="profession-text input" type="text">
+          <input id="profession-input" class="profession-text input" type="text">
         </div>
         <div class="player ">
           <div class="text-name shadow">
             <h2>Игрок:</h2>
           </div>
-          <input pattern="^[А-Яа-яЁё\s]+$" class="player-text input" type="text">
+          <input pattern="^[А-Яа-яЁё\s]+$" id="player-input" class="player-text input" type="text">
         </div>
 
         <div class="auditor">
@@ -31,7 +31,7 @@
             <h2>Аудитор:</h2>
           </div>
           <div class="center">
-            <input pattern="^[А-Яа-яЁё\s]+$" class="auditor-text input" type="text">
+            <input pattern="^[А-Яа-яЁё\s]+$" id="auditor-input" class="auditor-text input" type="text">
             <h2 class="small-text">(Игрок справа от вас)</h2>
           </div>
         </div>
@@ -52,7 +52,7 @@
               <h4 class="text-medium">Заработок:</h4>
             </div>
             <div class="column2">
-              <input value="0" type="number" name="name" class="field-input input-text input-income">
+              <input value="0" type="number" name="name" class="field-input input-text input-income" autocomplete="off">
             </div>
           </div>
           <div class="field ">
@@ -60,7 +60,7 @@
               <h4 class="text-medium">Капиталовложения:</h4>
             </div>
             <div class="column2">
-              <input value="0" type="number" name="name" class="field-input input-text">
+              <input value="0" type="number" name="name" class="field-input input-text" autocomplete="off">
             </div>
           </div>
           <div class="field ">
@@ -68,7 +68,7 @@
               <h4 class="text-medium">Дивиденты:</h4>
             </div>
             <div class="column2">
-              <input value="0" type="number" name="name" class="field-input input-text">
+              <input value="0" type="number" name="name" class="field-input input-text" autocomplete="off">
             </div>
           </div>
           <div class="field ">
@@ -80,42 +80,45 @@
           </div>
           <div class="field ">
             <div class="column1 column1-min">
-              <input class="field-input field-input-description-1" type="text">
+              <input class="field-input field-input-description-1" data-type="field-input-description-1" type="text" autocomplete="off">
             </div>
             <div class="column2 column-flex">
-              <input pattern="^[ 0-9]+$" id="input-realty-1" type="number" value="0" name="name"
-                class="field-input input-realty-1 input-text field-input-income-1">
-              <button class="button-field-input button-field-input-income-1">Очистить</button>
+              <input pattern="^[ 0-9]+$" type="number" value="0" name="name"
+                class="field-input input-realty input-text field-input-income-1" data-type="field-input-income-1" autocomplete="off">
+              <button class="button-field-input button-field-input-income">Очистить</button>
             </div>
           </div>
           <div class="field ">
             <div class="column1 column1-min">
-              <input pattern="^[ 0-9]+$" class="field-input field-input-description-2" type="text">
+              <input pattern="^[ 0-9]+$" class="field-input field-input-description-2" data-type="field-input-description-2" type="text" autocomplete="off">
             </div>
             <div class="column2 column-flex">
               <input pattern="^[ 0-9]+$" id="input-realty-2" type="number" value="0" name="name"
-                class="field-input input-realty-2 input-text  field-input-income-2">
-              <button class="button-field-input button-field-input-income-2">Очистить</button>
+                class="field-input input-realty input-text  field-input-income-2"  data-type="field-input-income-2" autocomplete="off">
+
+              <button class="button-field-input button-field-input-income">Очистить</button>
             </div>
           </div>
           <div class="field ">
             <div class="column1 column1-min">
-              <input  pattern="^[ 0-9]+$" class="field-input field-input-description-3" type="text">
+              <input pattern="^[ 0-9]+$" class="field-input field-input-description-3"  data-type="field-input-description-3" type="text" autocomplete="off">
             </div>
             <div class="column2 column-flex">
               <input pattern="^[ 0-9]+$" id="input-realty-3" type="number" value="0" name="name"
-                class="field-input input-realty-3 input-text field-input-income-3">
-              <button class="button-field-input button-field-input-income-3">Очистить</button>
+                class="field-input input-realty input-text field-input-income-3" data-type="field-input-income-3" autocomplete="off">
+
+              <button class="button-field-input button-field-input-income">Очистить</button>
             </div>
           </div>
           <div class="field ">
             <div class="column1 column1-min">
-              <input pattern="^[ 0-9]+$" class="field-input field-input-description-4" type="text">
+              <input pattern="^[ 0-9]+$" class="field-input field-input-description-4"  data-type="field-input-description-4" type="text" autocomplete="off">
+
             </div>
             <div class="column2 column-flex">
               <input pattern="^[ 0-9]+$" id="input-realty-4" value="0" type="number" name="name"
-                class="field-input input-realty-4 input-text field-input-income-4">
-              <button class="button-field-input button-field-input-income-4">Очистить</button>
+                class="field-input input-realty input-text field-input-income-4"  data-type="field-input-income-4" autocomplete="off">
+              <button class="button-field-input button-field-input-income" >Очистить</button>
             </div>
           </div>
           <div class="field ">
@@ -127,42 +130,47 @@
           </div>
           <div class="field ">
             <div class="column1 column1-min">
-              <input class="field-input field-input-description-5" type="text">
+              <input class="field-input field-input-description-5"   data-type="field-input-description-5" type="text" autocomplete="off">
+
             </div>
             <div class="column2 column-flex">
-              <input pattern="^[ 0-9]+$" id="input-business-1" value="0" type="number" name="name"
-                class="field-input input-business-1 input-text field-input-income-5">
-              <button class="button-field-input button-field-input-income-5">Очистить</button>
+              <input pattern="^[ 0-9]+$" value="0" type="number" name="name"
+                class="field-input input-business input-text field-input-income-5"    data-type="field-input-income-5" autocomplete="off">
+
+              <button class="button-field-input button-field-input-income">Очистить</button>
             </div>
           </div>
           <div class="field ">
             <div class="column1 column1-min">
-              <input class="field-input field-input-description-6" type="text">
+              <input class="field-input field-input-description-6"  data-type="field-input-description-6" type="text" autocomplete="off">
             </div>
             <div class="column2 column-flex">
-              <input pattern="^[ 0-9]+$" id="input-business-2" value="0" type="number" name="name"
-                class="field-input input-business-2 input-text field-input-income-6">
-              <button class="button-field-input button-field-input-income-6">Очистить</button>
+              <input pattern="^[ 0-9]+$" value="0" type="number" name="name" autocomplete="off"
+                class="field-input input-business input-text field-input-income-6"  data-type="field-input-income-6">
+
+              <button class="button-field-input button-field-input-income">Очистить</button>
             </div>
           </div>
           <div class="field ">
             <div class="column1 column1-min">
-              <input class="field-input field-input-description-7" type="text">
+              <input class="field-input field-input-description-7"    data-type="field-input-description-7" type="text" autocomplete="off">
+
             </div>
             <div class="column2 column-flex">
-              <input pattern="^[ 0-9]+$" id="input-business-3" value="0" type="number" name="name"
-                class="field-input input-business-3 input-text field-input-income-7">
-              <button class="button-field-input button-field-input-income-7">Очистить</button>
+              <input pattern="^[ 0-9]+$" value="0" type="number" name="name" autocomplete="off"
+                class="field-input input-business input-text field-input-income-7"  data-type="field-input-income-7">
+              <button class="button-field-input button-field-input-income">Очистить</button>
             </div>
           </div>
           <div class="field ">
             <div class="column1 column1-min">
-              <input class="field-input field-input-description-8" type="text">
+              <input class="field-input field-input-description-8"   data-type="field-input-description-8" type="text" autocomplete="off">
+
             </div>
             <div class="column2 column-flex">
-              <input pattern="^[ 0-9]+$" id="input-business-4" value="0" type="number" name="name"
-                class="field-input input-business-4 input-text field-input-income-8">
-              <button class="button-field-input button-field-input-income-8">Очистить</button>
+              <input pattern="^[ 0-9]+$" value="0" type="number" name="name" autocomplete="off"
+                class="field-input input-business input-text field-input-income-8" data-type="field-input-income-8">
+              <button class="button-field-input button-field-input-income">Очистить</button>
             </div>
           </div>
 
@@ -173,8 +181,8 @@
           <h2>Пассивный доход =</h2>
         </div>
         <div class="center">
-          <output id="output-passive" type="number" name="name" value="0"
-            class="auditor-text output output-passive-income">
+          <output id="output-passive"  name="name" value="0"
+            class="auditor-text output output-passive-income" id="output-passive-income">
         </div>
         <h2 class="small-text">(Денежный поток от капиталовложений)
           + дивидендов + аренды недвижимости + бизнесов</h2>
@@ -185,8 +193,7 @@
           <h2>Общий доход =</h2>
         </div>
         <div class="center">
-          <output id="output-total" type="number" name="name" value="0"
-            class="auditor-text output output-total-income">
+          <output id="output-total" type="number" name="name" value="0" class="auditor-text output output-total-income">
         </div>
       </div>
 
@@ -207,7 +214,8 @@
               <h4 class="text-medium">Налоги:</h4>
             </div>
             <div class="column2 col-name">
-              <input pattern="^[ 0-9]+$" type="number" value="0" name="name" class="field-input col-name taxes">
+              <input pattern="^[ 0-9]+$" type="number" value="0" name="name" class="field-input col-name taxes expenses-name"
+                autocomplete="off">
             </div>
           </div>
           <div class="field ">
@@ -215,7 +223,8 @@
               <h4 class="text-medium">Оплата закладной на дом:</h4>
             </div>
             <div class="column2">
-              <input type="number" value="0" name="name" class="field-input input-text payment-mortgage-house">
+              <input type="number" value="0" name="name" class="field-input input-text expenses-name" data-type="mortgage-house"
+                autocomplete="off">
             </div>
           </div>
           <div class="field ">
@@ -223,7 +232,8 @@
               <h4 class="text-medium">Оплата образования:</h4>
             </div>
             <div class="column2">
-              <input pattern="^[ 0-9]+$" type="number" value="0" name="name" class="field-input input-text payment-education">
+              <input pattern="^[ 0-9]+$" type="number" value="0" name="name"
+                class="field-input input-text payment-education expenses-name" data-type="credit-for-education" autocomplete="off">
             </div>
           </div>
           <div class="field ">
@@ -231,7 +241,8 @@
               <h4 class="text-medium">Оплата кредита на авто:</h4>
             </div>
             <div class="column2">
-              <input pattern="^[ 0-9]+$" type="number" value="0" name="name" class="field-input input-text payment-car-loan">
+              <input pattern="^[ 0-9]+$" type="number" value="0" name="name"
+                class="field-input input-text payment-car-loan expenses-name" data-type="car-loan" autocomplete="off">
             </div>
           </div>
           <div class="field ">
@@ -239,7 +250,8 @@
               <h4 class="text-medium">Выплаты по кредитке:</h4>
             </div>
             <div class="column2">
-              <input pattern="^[ 0-9]+$" type="number" value="0" name="name" class="field-input input-text credit-card-payments">
+              <input pattern="^[ 0-9]+$" type="number" value="0" name="name"
+                class="field-input input-text credit-card-payments expenses-name" data-type="credit-card-debt" autocomplete="off">
             </div>
           </div>
           <div class="field ">
@@ -247,7 +259,8 @@
               <h4 class="text-medium">Розничные расходы:</h4>
             </div>
             <div class="column2">
-              <input pattern="^[ 0-9]+$" type="number" value="0" name="name" class="field-input input-text retail-expenses">
+              <input pattern="^[ 0-9]+$" type="number" value="0" name="name"
+                class="field-input input-text retail-expenses expenses-name" data-type="retail-debt" autocomplete="off">
             </div>
           </div>
           <div class="field ">
@@ -255,7 +268,8 @@
               <h4 class="text-medium">Другие расходы:</h4>
             </div>
             <div class="column2 col-name">
-              <input pattern="^[ 0-9]+$" type="number" value="0" name="name" class="field-input input-text col-name other-expenses">
+              <input pattern="^[ 0-9]+$" type="number" value="0" name="name"
+                class="field-input input-text col-name other-expenses expenses-name" autocomplete="off">
             </div>
           </div>
           <div class="field">
@@ -263,8 +277,7 @@
               <h4 class="text-medium">Расходы на детей:</h4>
             </div>
             <div pattern="^[ 0-9]+$" class="column2 col-name">
-              <output type="number" value="0" name="name"
-                class="col-name expenses-children output output-line">
+              <output type="number" value="0" name="name" class="col-name expenses-children output output-line expenses-output">
             </div>
           </div>
           <div class="field ">
@@ -272,39 +285,40 @@
               <h4 class="text-medium">Оплата кредита банка:</h4>
             </div>
             <div class="column2">
-              <output pattern="^[ 0-9]+$" type="number" value="0" name="name" class="bank-loan-payment output output-line">
+              <output pattern="^[ 0-9]+$" type="number" value="0" name="name"
+                class="bank-loan-payment output output-line expenses-output" data-output="bank-loan">
             </div>
           </div>
           <div class="field ">
             <div class="column1">
-              <input class="field-input" type="text">
+              <input class="field-input" type="text" autocomplete="off">
             </div>
             <div class="column2">
-              <input pattern="^[ 0-9]+$" class="field-input" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input" type="number" autocomplete="off">
             </div>
           </div>
           <div class="field ">
             <div class="column1">
-              <input pattern="^[ 0-9]+$" class="field-input" type="text">
+              <input pattern="^[ 0-9]+$" class="field-input" type="text" autocomplete="off">
             </div>
             <div class="column2">
-              <input pattern="^[ 0-9]+$" class="field-input" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input" type="number" autocomplete="off">
             </div>
           </div>
           <div class="field ">
             <div class="column1">
-              <input class="field-input" type="text">
+              <input class="field-input" type="text" autocomplete="off">
             </div>
             <div class="column2">
-              <input pattern="^[ 0-9]+$" class="field-input" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input" type="number" autocomplete="off">
             </div>
           </div>
           <div class="field ">
             <div class="column1">
-              <input class="field-input" type="text">
+              <input class="field-input" type="text" autocomplete="off">
             </div>
             <div class="column2">
-              <input pattern="^[ 0-9]+$" class="field-input" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input" type="number" autocomplete="off">
             </div>
           </div>
         </div>
@@ -315,7 +329,8 @@
             <h2>Количество детей:</h2>
           </div>
           <div class="center">
-            <input pattern="^[ 0-9]+$" type="number" value="0" name="name" class="input col-name coll-kids">
+            <input pattern="^[ 0-9]+$" type="number" value="0" name="name" class="input col-name coll-kids field-input"
+              autocomplete="off">
             <h2 class="small-text">(Игру начинают без детей)</h2>
           </div>
         </div>
@@ -324,7 +339,8 @@
             <h2>Расходы на детей: </h2>
           </div>
           <div class="center">
-            <input pattern="^[ 0-9]+$" value="0" name="name-expenses" class="input col-name expenses-children-input">
+            <input pattern="^[ 0-9]+$" value="0" name="name-expenses"
+              class="input col-name expenses-children-input field-input" autocomplete="off">
             <h2 class="small-text">(Игру начинают без детей)</h2>
           </div>
         </div>
@@ -347,13 +363,14 @@
       </div>
       <h1 class="header-name">Балансовый отчет</h1>
 
-      <div class="Assets">
+      <div class="assets">
         <h3 class="text-name column-name">Активы</h3>
         <div class="field-block">
           <div class="field field-name ">
             <div class="column1 field-assets">
               <h4 class="text-medium text-field-name">Сбережения:</h4>
-              <input type="number" value="0" name="name" class="auditor-text input field-assets-input">
+              <input type="number" value="0" name="name" class="auditor-text input field-assets-input field-input"
+                autocomplete="off">
             </div>
           </div>
           <div class="field">
@@ -368,51 +385,62 @@
             </div>
           </div>
           <div class="field">
-            <div class="column1-field ">
-              <input class="field-input stocks-1" type="text">
-              <button class="button-field-input button-field-input-active-1">Очистить</button>
+            <div class="column1-field">
+              <input class="field-input" data-type="stocks-1" type="text" autocomplete="off">
+              <button class="button-field-input button-field-input-active">Очистить</button>
             </div>
-            <div class="column2-field ">
-              <input pattern="^[ 0-9]+$" class="field-input number-shares-1" type="number">
+            <div class="column2-field">
+              <input pattern="^[ 0-9]+$" class="field-input number-shares-1" data-type_2="number-shares-1" type="number"
+                autocomplete="off">
             </div>
-            <div class="column3-field ">
-              <input pattern="^[ 0-9]+$" class="field-input price-1" type="number">
-            </div>
-          </div>
-          <div class="field">
-            <div class="column1-field ">
-              <input class="field-input stocks-2" type="text">
-              <button class="button-field-input button-field-input-active-2">Очистить</button>
-            </div>
-            <div class="column2-field ">
-              <input pattern="^[ 0-9]+$" class="field-input number-shares-2" type="number">
-            </div>
-            <div class="column3-field ">
-              <input pattern="^[ 0-9]+$" class="field-input price-2" type="number">
+            <div class="column3-field">
+              <input pattern="^[ 0-9]+$" class="field-input price-1" data-type_3="price-1" type="number"
+                autocomplete="off">
             </div>
           </div>
+
           <div class="field">
-            <div class="column1-field ">
-              <input class="field-input stocks-3" type="text">
-              <button class="button-field-input button-field-input-active-3">Очистить</button>
+            <div class="column1-field">
+              <input class="field-input" data-type="stocks-2" type="text" autocomplete="off">
+              <button class="button-field-input button-field-input-active">Очистить</button>
             </div>
-            <div class="column2-field ">
-              <input pattern="^[ 0-9]+$" class="field-input number-shares-3" type="number">
+            <div class="column2-field">
+              <input pattern="^[ 0-9]+$" class="field-input number-shares-2" data-type_2="number-shares-2" type="number"
+                autocomplete="off">
             </div>
-            <div class="column3-field ">
-              <input pattern="^[ 0-9]+$" class="field-input price-3" type="number">
+            <div class="column3-field">
+              <input pattern="^[ 0-9]+$" class="field-input price-2" data-type_3="price-2" type="number"
+                autocomplete="off">
             </div>
           </div>
+
           <div class="field">
-            <div class="column1-field ">
-              <input class="field-input stocks-4" type="text">
-              <button class="button-field-input button-field-input-active-4">Очистить</button>
+            <div class="column1-field">
+              <input class="field-input" data-type="stocks-3" type="text" autocomplete="off">
+              <button class="button-field-input button-field-input-active">Очистить</button>
             </div>
-            <div class="column2-field ">
-              <input pattern="^[ 0-9]+$" class="field-input number-shares-4" type="number">
+            <div class="column2-field">
+              <input pattern="^[ 0-9]+$" class="field-input number-shares-3" data-type_2="number-shares-3" type="number"
+                autocomplete="off">
             </div>
-            <div class="column3-field ">
-              <input pattern="^[ 0-9]+$" class="field-input price-4" type="number">
+            <div class="column3-field">
+              <input pattern="^[ 0-9]+$" class="field-input price-3" data-type_3="price-3" type="number"
+                autocomplete="off">
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="column1-field">
+              <input class="field-input" data-type="stocks-4" type="text" autocomplete="off">
+              <button class="button-field-input button-field-input-active">Очистить</button>
+            </div>
+            <div class="column2-field">
+              <input pattern="^[ 0-9]+$" class="field-input number-shares-4" data-type_2="number-shares-4" type="number"
+                autocomplete="off">
+            </div>
+            <div class="column3-field">
+              <input pattern="^[ 0-9]+$" class="field-input price-4" data-type_3="price-4" type="number"
+                autocomplete="off">
             </div>
           </div>
           <div class="field">
@@ -428,50 +456,61 @@
           </div>
           <div class="field">
             <div class="column1-field ">
-              <input class="field-input realty-1" type="text">
-              <button class="button-field-input button-field-input-active-5">Очистить</button>
+              <input class="field-input realty-1" data-type="realty-1" type="text" autocomplete="off">
+
+              <button class="button-field-input button-field-input-active">Очистить</button>
             </div>
             <div class="column2-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-realty-1" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-realty-1"  data-type_2="first-installment-realty-1" type="number"
+                autocomplete="off">
             </div>
             <div class="column3-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-price-1" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-price-1" data-type_3="first-installment-price-1" type="number" autocomplete="off">
             </div>
           </div>
           <div class="field">
             <div class="column1-field ">
-              <input class="field-input realty-2" type="text">
-              <button class="button-field-input button-field-input-active-6">Очистить</button>
+              <input class="field-input realty-2"  data-type="realty-2" type="text" autocomplete="off">
+
+              <button class="button-field-input button-field-input-active">Очистить</button>
             </div>
             <div class="column2-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-realty-2" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-realty-2"  data-type_2="first-installment-realty-2" type="number"
+
+                autocomplete="off">
             </div>
             <div class="column3-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-price-2" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-price-2"  data-type_3="first-installment-price-2" type="number" autocomplete="off">
+
             </div>
           </div>
           <div class="field">
             <div class="column1-field ">
-              <input class="field-input realty-3" type="text">
-              <button class="button-field-input button-field-input-active-7">Очистить</button>
+              <input class="field-input realty-3" data-type="realty-3" type="text">
+              <button class="button-field-input button-field-input-active">Очистить</button>
             </div>
             <div class="column2-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-realty-3" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-realty-3" data-type_2="first-installment-realty-3" type="number"
+                autocomplete="off">
             </div>
             <div class="column3-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-price-3" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-price-3"  data-type_3="first-installment-price-3" type="number" autocomplete="off">
+
             </div>
           </div>
           <div class="field">
             <div class="column1-field ">
-              <input class="field-input realty-4" type="text">
-              <button class="button-field-input button-field-input-active-8">Очистить</button>
+              <input class="field-input realty-4"  data-type="realty-4" type="text">
+
+              <button class="button-field-input button-field-input-active">Очистить</button>
             </div>
             <div class="column2-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-realty-4" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-realty-4"   data-type_2="first-installment-realty-4" type="number"
+
+                autocomplete="off">
             </div>
             <div class="column3-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-price-4" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-price-4"  data-type_3="first-installment-price-4" type="number" autocomplete="off">
             </div>
           </div>
           <div class="field">
@@ -487,50 +526,67 @@
           </div>
           <div class="field">
             <div class="column1-field ">
-              <input class="field-input business-1" type="text">
-              <button class="button-field-input button-field-input-active-9">Очистить</button>
+              <input class="field-input business-1"   data-type="business-1" type="text">
+
+              <button class="button-field-input button-field-input-active">Очистить</button>
             </div>
             <div class="column2-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-business-1" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-business-1"   data-type_2="first-installment-business-1" type="number"
+
+                autocomplete="off">
             </div>
             <div class="column3-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-business-price-1" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-business-price-1" data-type_3="first-installment-price-1" type="number"
+                autocomplete="off">
             </div>
           </div>
           <div class="field">
             <div class="column1-field ">
-              <input class="field-input business-2" type="text">
-              <button class="button-field-input button-field-input-active-10">Очистить</button>
+              <input class="field-input business-2"   data-type="business-2" type="text">
+
+              <button class="button-field-input button-field-input-active">Очистить</button>
             </div>
             <div class="column2-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-business-2" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-business-2"    data-type_2="first-installment-business-2" type="number"
+
+                autocomplete="off">
             </div>
             <div class="column3-field ">
-              <input pattern="^[ 0-9]+$" class="field-input  first-installment-business-price-2" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input  first-installment-business-price-2"  data-type_3="first-installment-price-2" type="number"
+
+                autocomplete="off">
             </div>
           </div>
           <div class="field">
             <div class="column1-field ">
-              <input class="field-input business-3" type="text">
-              <button class="button-field-input button-field-input-active-11">Очистить</button>
+              <input class="field-input business-3" data-type="business-3" type="text">
+              <button class="button-field-input button-field-input-active">Очистить</button>
             </div>
             <div class="column2-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-business-3" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-business-3" data-type_2="first-installment-business-3" type="number"
+                autocomplete="off">
             </div>
             <div class="column3-field ">
-              <input pattern="^[ 0-9]+$" class="field-input  first-installment-business-price-3" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input  first-installment-business-price-3"   data-type_3="first-installment-price-3" type="number"
+
+                autocomplete="off">
             </div>
           </div>
           <div class="field">
             <div class="column1-field ">
-              <input class="field-input business-4" type="text">
-              <button class="button-field-input button-field-input-active-12">Очистить</button>
+              <input class="field-input business-4"  data-type="business-4" type="text">
+
+              <button class="button-field-input button-field-input-active">Очистить</button>
             </div>
             <div class="column2-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-business-4" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-business-4"  data-type_2="first-installment-business-4" type="number"
+
+                autocomplete="off">
             </div>
             <div class="column3-field ">
-              <input pattern="^[ 0-9]+$" class="field-input first-installment-business-price-4" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input first-installment-business-price-4"  data-type_3="first-installment-price-4" type="number"
+
+                autocomplete="off">
             </div>
           </div>
         </div>
@@ -543,8 +599,9 @@
               <h4 class="text-medium">Закладная на дом:</h4>
             </div>
             <div class="column2 column-button">
-              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input mortgage-house" type="number">
-              <button class="button-field-input button-field-input-1">Погасить</button>
+              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input" data-type="mortgage-house"
+                type="number" autocomplete="off">
+              <button class="button-field-input button-field-input-js button-field-input-1">Погасить</button>
             </div>
           </div>
           <div class="field ">
@@ -552,8 +609,9 @@
               <h4 class="text-medium">Кредит на образования:</h4>
             </div>
             <div class="column2 column-button">
-              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input credit-for-education" type="number">
-              <button class="button-field-input button-field-input-2">Погасить</button>
+              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input " data-type="credit-for-education"
+                type="number" autocomplete="off">
+              <button class="button-field-input button-field-input-js button-field-input-2">Погасить</button>
             </div>
           </div>
           <div class="field ">
@@ -561,8 +619,9 @@
               <h4 class="text-medium">Кредит на авто:</h4>
             </div>
             <div class="column2 column-button">
-              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input car-loan" type="number">
-              <button class="button-field-input button-field-input-3">Погасить</button>
+              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input" data-type="car-loan" type="number"
+                autocomplete="off">
+              <button class="button-field-input button-field-input-js button-field-input-3">Погасить</button>
             </div>
           </div>
           <div class="field ">
@@ -570,8 +629,9 @@
               <h4 class="text-medium">Долг по кредитке:</h4>
             </div>
             <div class="column2 column-button">
-              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input  credit-card-debt" type="number">
-              <button class="button-field-input button-field-input-4">Погасить</button>
+              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input" data-type="credit-card-debt"
+                type="number" autocomplete="off">
+              <button class="button-field-input button-field-input-js button-field-input-4">Погасить</button>
             </div>
           </div>
           <div class="field ">
@@ -579,25 +639,9 @@
               <h4 class="text-medium">Розничный долг:</h4>
             </div>
             <div class="column2 column-button">
-              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input  retail-debt" type="number">
-              <button class="button-field-input button-field-input-5">Погасить</button>
-            </div>
-          </div>
-          <!-- <div class="field ">
-            <div class="column1 ">
-              <h4 class="text-medium">По закладным:</h4>
-            </div>
-            <div class="column2 column-button">
-              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input on-mortgages" type="number">
-              <button class="button-field-input button-field-input-6">Погасить</button>
-            </div>
-          </div> -->
-          <div class="field ">
-            <div class="column1">
-              <input class="field-input" type="text">
-            </div>
-            <div class="column2 column-button">
-              <input pattern="^[ 0-9]+$" class="field-input" type="number">
+              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input" data-type="retail-debt" type="number"
+                autocomplete="off">
+              <button class="button-field-input button-field-input-js button-field-input-5">Погасить</button>
             </div>
           </div>
           <div class="field ">
@@ -605,7 +649,15 @@
               <input class="field-input" type="text">
             </div>
             <div class="column2 column-button">
-              <input pattern="^[ 0-9]+$" class="field-input" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input" type="number" autocomplete="off">
+            </div>
+          </div>
+          <div class="field ">
+            <div class="column1">
+              <input class="field-input" type="text">
+            </div>
+            <div class="column2 column-button">
+              <input pattern="^[ 0-9]+$" class="field-input" type="number" autocomplete="off">
             </div>
           </div>
           <div class="field ">
@@ -613,8 +665,7 @@
               <h4 class="text-medium">Пассивы:(Бизнес)</h4>
             </div>
             <div class="column2 column-button">
-              <input pattern="^[ 0-9]+$" name="name" class="field-input liabilities" type="number">
-              <!-- <button class="button-field-input button-field-input-7">Погасить</button> -->
+              <input pattern="^[ 0-9]+$" name="name" class="field-input liabilities" type="number" autocomplete="off">
             </div>
           </div>
           <div class="field ">
@@ -622,7 +673,7 @@
               <input class="field-input" type="text">
             </div>
             <div class="column2">
-              <input pattern="^[ 0-9]+$" class="field-input" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input" type="number" autocomplete="off">
             </div>
           </div>
           <div class="field ">
@@ -630,7 +681,7 @@
               <input class="field-input" type="text">
             </div>
             <div class="column2">
-              <input pattern="^[ 0-9]+$" class="field-input" type="number">
+              <input pattern="^[ 0-9]+$" class="field-input" type="number" autocomplete="off">
             </div>
           </div>
           <div class="field ">
@@ -638,7 +689,8 @@
               <h4 class="text-medium">Кредит банка:</h4>
             </div>
             <div class="column2 column-button">
-              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input bank-loan" type="number">
+              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input bank-loan" data-output="bank-loan"
+                type="number" autocomplete="off">
               <button class="button-field-input button-field-input-8">Погасить</button>
             </div>
           </div>
@@ -652,7 +704,9 @@
           </div>
         </div>
       </div>
-      <a href="./page/BigCircle.html" target="_blank" style="text-decoration: none;"><input class="button-footer" type="button" value="Большой круг!" /></a>
+      <a href="./page/BigCircle.html" target="_blank" style="text-decoration: none;"><input class="button-footer"
+          type="button" value="Большой круг!" /></a>
+<!-- <button onclick="setPPA ()"></button> -->
     </main>
   </div>
 </body>

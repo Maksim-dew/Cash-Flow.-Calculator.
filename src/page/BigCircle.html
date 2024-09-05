@@ -11,19 +11,19 @@
     <header class="header">
       <h1 class="header-name">Поздравляем!</br> Вы выбрались из "Крысиных гонок"!</h1>
     </header>
-    <main class="main">
+    <main class="mainBG">
       <div class="name-section">
         <div class="profession ">
           <div class="text-name shadow">
             <h2>Профессия:</h2>
           </div>
-          <input pattern="^[А-Яа-яЁё\s]+$" class="profession-text input" type="text">
+          <output pattern="^[А-Яа-яЁё\s]+$" id="profession-output" class="profession-textBG output" type="text">
         </div>
         <div class="player ">
           <div class="text-name shadow">
             <h2>Игрок:</h2>
           </div>
-          <input pattern="^[А-Яа-яЁё\s]+$" class="player-text input" type="text">
+          <output pattern="^[А-Яа-яЁё\s]+$" id="player-output" class="player-text output" type="text">
         </div>
 
         <div class="auditor">
@@ -31,7 +31,7 @@
             <h2>Аудитор:</h2>
           </div>
           <div class="center">
-            <input pattern="^[А-Яа-яЁё\s]+$" class="auditor-text input" type="text">
+            <output pattern="^[А-Яа-яЁё\s]+$" id="auditor-output" class="auditor-text output" type="text">
             <h2 class="small-text">(Игрок справа от вас)</h2>
           </div>
         </div>
@@ -45,7 +45,7 @@
             <h3>Старый пассивный доход:</h3>
           </div>
           <div class="center">
-            <input pattern="^[ 0-9]+$" type="number" value="0" name="name" class="input old-pass">
+            <output pattern="^[ 0-9]+$" value="0" name="name" class="output old-pass" id="output-passive-incomeBG">
           </div>
         </div>
         <h4 class="text-big">x100</h4>
@@ -99,10 +99,10 @@
             <input class="field-input" type="text">
           </div>
           <div class="column2-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <input pattern="^[ 0-9]+$" class="field-input input-business button-field-input-active"  type="number">
           </div>
           <div class="column3-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <output pattern="^[ 0-9]+$" class="field-input" type="number">
           </div>
         </div>
         <div class="field">
@@ -110,10 +110,10 @@
             <input class="field-input" type="text">
           </div>
           <div class="column2-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <input pattern="^[ 0-9]+$" class="field-input input-business button-field-input-active" type="number">
           </div>
           <div class="column3-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <output pattern="^[ 0-9]+$" class="field-input" type="number">
           </div>
         </div>
         <div class="field">
@@ -121,10 +121,10 @@
             <input class="field-input" type="text">
           </div>
           <div class="column2-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <input pattern="^[ 0-9]+$" class="field-input input-business button-field-input-active" type="number">
           </div>
           <div class="column3-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <output pattern="^[ 0-9]+$" class="field-input" type="number">
           </div>
         </div>
         <div class="field">
@@ -132,10 +132,10 @@
             <input class="field-input" type="text">
           </div>
           <div class="column2-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <input pattern="^[ 0-9]+$" class="field-input input-business button-field-input-active" type="number">
           </div>
           <div class="column3-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <output pattern="^[ 0-9]+$" class="field-input" type="number">
           </div>
         </div>
         <div class="field">
@@ -143,10 +143,10 @@
             <input class="field-input" type="text">
           </div>
           <div class="column2-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <input pattern="^[ 0-9]+$" class="field-input input-business button-field-input-active" type="number">
           </div>
           <div class="column3-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <output pattern="^[ 0-9]+$" class="field-input" type="number">
           </div>
         </div>
         <div class="field">
@@ -154,10 +154,10 @@
             <input class="field-input" type="text">
           </div>
           <div class="column2-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <input pattern="^[ 0-9]+$" class="field-input input-business button-field-input-active" type="number">
           </div>
           <div class="column3-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <output pattern="^[ 0-9]+$" class="field-input" type="number">
           </div>
         </div>
         <div class="field">
@@ -165,10 +165,10 @@
             <input class="field-input" type="text">
           </div>
           <div class="column2-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <input pattern="^[ 0-9]+$" class="field-input input-business button-field-input-active" type="number">
           </div>
           <div class="column3-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <output pattern="^[ 0-9]+$" class="field-input" type="number">
           </div>
         </div>
         <div class="field">
@@ -176,10 +176,10 @@
             <input class="field-input" type="text">
           </div>
           <div class="column2-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <input pattern="^[ 0-9]+$" class="field-input input-business button-field-input-active" type="number">
           </div>
           <div class="column3-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <output pattern="^[ 0-9]+$" class="field-input" type="number">
           </div>
         </div>
         <div class="field">
@@ -187,10 +187,10 @@
             <input class="field-input" type="text">
           </div>
           <div class="column2-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <input pattern="^[ 0-9]+$" class="field-input input-business button-field-input-active" type="number">
           </div>
           <div class="column3-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <output pattern="^[ 0-9]+$" class="field-input" type="number">
           </div>
         </div>
         <div class="field">
@@ -198,10 +198,10 @@
             <input class="field-input" type="text">
           </div>
           <div class="column2-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <input pattern="^[ 0-9]+$" class="field-input input-business button-field-input-active" type="number">
           </div>
           <div class="column3-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <output pattern="^[ 0-9]+$" class="field-input" type="number">
           </div>
         </div>
         <div class="field">
@@ -209,10 +209,10 @@
             <input class="field-input" type="text">
           </div>
           <div class="column2-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <input pattern="^[ 0-9]+$" class="field-input input-business button-field-input-active" type="number">
           </div>
           <div class="column3-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <output pattern="^[ 0-9]+$" class="field-input" type="number">
           </div>
         </div>
         <div class="field">
@@ -220,10 +220,10 @@
             <input class="field-input" type="text">
           </div>
           <div class="column2-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <input pattern="^[ 0-9]+$" class="field-input input-business button-field-input-active" type="number">
           </div>
           <div class="column3-field-bc ">
-            <input pattern="^[ 0-9]+$" class="field-input" type="number">
+            <output pattern="^[ 0-9]+$" class="field-input" type="number">
           </div>
         </div>
         <a href="../index.html" target="_blank" style="text-decoration: none;"><input class="button-footer" type="button" value="Назад" /></a>
