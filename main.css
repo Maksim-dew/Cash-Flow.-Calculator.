@@ -1,3 +1,71 @@
+.new-pass {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.text-big {
+  font-size: 28px;
+  margin: 10px 0 0 0;
+}
+
+.output-new-pass {
+  margin-bottom: 30px;
+}
+
+.text-name-bc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1D313C;
+  color: white;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.text-big {
+  text-align: center;
+}
+
+.text-gl {
+  margin: 20px 0 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1D313C;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.column1-field-bc, .column2-field-bc, .column3-field-bc  {
+  min-width: 120px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  border-bottom: 1px solid black;
+}
+
+.bc_1,  .bc_2, .bc_3 {
+  border-top: 1px solid black;
+}
+
+
+.column1-field-bc {
+  border-left: 1px solid black;
+}
+
+.column2-field-bc {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.column3-field-bc {
+  border-right: 1px solid black;
+}
 * {
   scroll-behavior: smooth;
 }
@@ -15,13 +83,15 @@
 .page-w {
   width: 50%;
   min-width: 360px;
+  /* background-color: rgba(55, 55, 55, 0.2); */
 }
 
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-image: url("../image/pattern-trigon-rhomb-shuriken.svg"); */
+  /* background-image: url("../image/pattern-infinity-honeycomb.svg"); */
+  background-image: url(/e53f9737650ce7c45be6.jpg);
   background-color: #628A81;
 }
 
@@ -69,6 +139,7 @@
   border-bottom: 2px solid black;
   margin-top: 25px;
   text-align: center;
+  justify-content: center;
 }
 
 .input,
@@ -87,7 +158,7 @@
 
 .output-line {
   border: 0px;
-  margin-left: 5px;
+  margin-left: -5px;
 }
 
 .auditor-text,
@@ -131,6 +202,7 @@
 
 .field {
   display: flex;
+  background-color: #72a096;
 }
 .income {
   display: flex;
@@ -295,6 +367,7 @@
   color: white;
   font-size: 32px;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 .button-field-input {
@@ -315,4 +388,6 @@
   display: flex;
   align-items: center;
 }
+
+
 
