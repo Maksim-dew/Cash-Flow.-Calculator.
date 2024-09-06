@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
-        publicPath: ''
+        publicPath: '/'
   },
   mode: 'development', // добавили режим разработчика
   devServer: {
@@ -55,9 +55,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      filename: 'index.html' // keep this one as is
     }),
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin() // подключение плагина для объединения файлов
-  ] 
-}; 
+    new MiniCssExtractPlugin()
+  ]
+};
