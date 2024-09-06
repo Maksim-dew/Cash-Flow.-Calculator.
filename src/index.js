@@ -1,5 +1,4 @@
 import "./styles/index.css";
-
 import {updateOutput, clearExpenses} from "./scripts/smallCircle.js"
 import {sumBusiness, newPass} from "./scripts/BigCircle.js"
 
