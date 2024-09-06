@@ -369,6 +369,9 @@
   font-size: 32px;
   border-radius: 5px;
   text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .button-field-input {
@@ -383,11 +386,17 @@
   margin-right: 10px;
   margin-left: 3px;
   border-radius: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .column-button {
   display: flex;
   align-items: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 
