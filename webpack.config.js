@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
-        publicPath: '/'
+        publicPath: '/Cash-Flow.Calculator/' // 
   },
   mode: 'development', // добавили режим разработчика
   devServer: {
@@ -58,7 +58,11 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html' // keep this one as is
     }),
+    new HtmlWebpackPlugin({
+      template: './src/page/BigCircle.html',
+      filename: 'page/BigCircle.html' // измените путь для этого файла
+    }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin()
   ]
-};
+}; 
