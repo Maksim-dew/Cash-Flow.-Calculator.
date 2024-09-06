@@ -1,16 +1,17 @@
 import "./styles/index.css";
 
-import {updateOutput, clearExpenses, clearAssets, clearIncome} from "./scripts/smallCircle.js"
-import {sumBusiness} from "./scripts/BigCircle.js"
+import {updateOutput, clearExpenses} from "./scripts/smallCircle.js"
+import {sumBusiness, newPass} from "./scripts/BigCircle.js"
 
-//Бизнес БК
-
-  const mainBG = document.querySelector(".mainBG");
-  const inputsBusiness = mainBG.querySelectorAll(".input-business");
-  inputsBusiness.forEach((input) => {
-    input.addEventListener("click", sumBusiness);
-  });
-
+// Бизнес БК
+const mainBG = document.querySelector(".mainBG");
+if (mainBG) {
+const inputsBusiness = mainBG.querySelectorAll(".input-business");
+// Добавляем слушатели событий на изменение input
+inputsBusiness.forEach((input) => {
+  input.addEventListener("input", sumBusiness); // Отслеживаем изменения только для того input, который изменился
+});
+}
 
 
 //kids
@@ -29,55 +30,91 @@ inputText.forEach((input) => {
   input.addEventListener("change", updateOutput);
 });
 
-function inputClear() {
-  const inputFields = document.querySelectorAll('.field-input');
-  inputFields.forEach(input => {
+  
+function setData(data = {}, field = 'JSON') {
+  localStorage.setItem(field, JSON.stringify(data));
+}
+
+function getData(field = 'JSON') {
+
+  const localDataText = localStorage.getItem(field);
+
+  if (!localDataText) {
+    return {};
+  }
+
+  const localDataJSON = JSON.parse(localDataText.toString());
+
+  Object.keys(localDataJSON).forEach(key  => {
+    if (document.getElementById(`${key}-output`) && localDataJSON[key]) {
+      document.getElementById(`${key}-output`).value = localDataJSON[key];
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  
+  getData();
+
+  clearExpenses();
+  clearExpenses('output', '.button-field-input-8');
+
+  //Кнопки очистки Активов
+  document.querySelectorAll(
+    ".button-field-input-active"
+  ).forEach((input) => {
+    input.addEventListener("click", () => {
+      const column = input.parentNode.querySelector("input[data-type]");
+      const assets = document.querySelector(".assets");
+      if(assets) {
+      const column_1 = column.getAttribute("data-type");
+      document
+        .querySelector(".assets")
+        .querySelector("input[data-type=" + column_1 + "]").value = 0;
+
+      const fieldContainer = input.closest(".field");
+      const column_2 = fieldContainer.querySelector("input[data-type_2]");
+      column_2.value = 0;
+
+      const column_3 = fieldContainer.querySelector("input[data-type_3]");
+      column_3.value = 0;
+      }
+      updateOutput();
+    });
+  });
+
+  document.querySelectorAll(".button-field-input-income").forEach((input) => {
+    input.addEventListener("click", () => {
+      const inputIncome = input.parentNode.querySelector("input[data-type]");
+      console.log("inputIncome: ", inputIncome);
+      inputIncome.value = 0;
+
+      const NameIncome = input.closest(".field");
+      console.log("fieldContainer: ", NameIncome);
+      const columnName = NameIncome.querySelector("input[data-type]");
+      columnName.value = "";
+      updateOutput();
+    });
+  });
+
+  document.querySelectorAll('.field-input').forEach(input => {
     input.addEventListener('focus', () => {
       input.value = '';
     });
   });
-  }
 
-  
-function setData () {
-  
-  const profession = document.getElementById('profession-input').value;
-  const player = document.getElementById('player-input').value;
-  const auditor = document.getElementById('auditor-input').value;
-  // const passiv = document.getElementById('output-passive-income').value;
+  document.querySelector('.button-footer').addEventListener('click', () => {
+    setData({
+      profession: document.getElementById('profession-input').value,
+      player: document.getElementById('player-input').value,
+      auditor: document.getElementById('auditor-input').value,
+      passiveIncome: parseFloat(document.getElementById('passive-income-output').value || 0)
+    });
+  });
 
-  
-// console.log('passiveIncome', String(passiv));
-// console.log("localStorage: ", String(passiv));
-
-localStorage.setItem('profession', profession);
-localStorage.setItem('player', player);
-localStorage.setItem('auditor', auditor);
-
-}
-
-const buttonFooter =  document.querySelector('.button-footer');
-buttonFooter.addEventListener('click', setData)
-
-function loadData() {
-
-  const profession = localStorage.getItem('profession');
-  const player = localStorage.getItem('player');
-  const auditor = localStorage.getItem('auditor');
-
-  // const storedPassiveIncome = localStorage.getItem('passiveIncome');
-  // document.getElementById('output-passive-income').textContent = storedPassiveIncome;
-
-  document.getElementById('profession-output').textContent = profession;
-  document.getElementById('player-output').textContent = player;
-  document.getElementById('auditor-output').textContent = auditor;
-}
+  newPass ();
+});
 
 
-  clearAssets();
-  updateOutput();
-  clearExpenses();
-  clearIncome();
-  inputClear();
+  // updateOutput();
 
-  loadData();

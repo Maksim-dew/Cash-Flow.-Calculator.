@@ -181,8 +181,8 @@
           <h2>Пассивный доход =</h2>
         </div>
         <div class="center">
-          <output id="output-passive"  name="name" value="0"
-            class="auditor-text output output-passive-income" id="output-passive-income">
+          <output name="name" value="0"
+            class="auditor-text output passive-income-output" id="passive-income-output">
         </div>
         <h2 class="small-text">(Денежный поток от капиталовложений)
           + дивидендов + аренды недвижимости + бизнесов</h2>
@@ -286,7 +286,7 @@
             </div>
             <div class="column2">
               <output pattern="^[ 0-9]+$" type="number" value="0" name="name"
-                class="bank-loan-payment output output-line expenses-output" data-output="bank-loan">
+                class="bank-loan-payment output output-line expenses-output" data-type="bank-loan">
             </div>
           </div>
           <div class="field ">
@@ -689,7 +689,7 @@
               <h4 class="text-medium">Кредит банка:</h4>
             </div>
             <div class="column2 column-button">
-              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input bank-loan" data-output="bank-loan"
+              <input pattern="^[ 0-9]+$" value="0" name="name" class="field-input bank-loan" data-type="bank-loan"
                 type="number" autocomplete="off">
               <button class="button-field-input button-field-input-8">Погасить</button>
             </div>
@@ -704,7 +704,7 @@
           </div>
         </div>
       </div>
-      <a href="./page/BigCircle.html" target="_blank" style="text-decoration: none;"><input class="button-footer"
+      <a href="./page/BigCircle.html" style="text-decoration: none;"><input class="button-footer"
           type="button" value="Большой круг!" /></a>
 <!-- <button onclick="setPPA ()"></button> -->
     </main>

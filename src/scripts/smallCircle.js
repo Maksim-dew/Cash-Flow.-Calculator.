@@ -1,25 +1,34 @@
-const income = document.querySelector(".income");
 // const assets = document.querySelector(".assets");
 
 export function updateOutput() {
-  if (window.location.pathname === '/index.html') {
+  const income = document.querySelector(".income");
+  if (!income) {
+    return;
+  }
+  
+  let sumRealty = 0;
+  let sumBusiness = 0;
+
   //недвижка
   const realtyInputs = income.querySelectorAll(".input-realty");
-  let sumRealty = 0;
-  realtyInputs.forEach((input) => {
-    sumRealty += parseFloat(input.value) || 0;
-  });
+  if (realtyInputs && realtyInputs.length) {
+    realtyInputs.forEach((input) => {
+      sumRealty += parseFloat(input.value) || 0;
+    });
+  }
 
   //бизнес
   const businessInputs = income.querySelectorAll(".input-business");
-  let sumBusiness = 0;
-  businessInputs.forEach((input) => {
-    sumBusiness += parseFloat(input.value) || 0;
-  });
+  if (businessInputs && businessInputs.length) {
+    businessInputs.forEach((input) => {
+      sumBusiness += parseFloat(input.value) || 0;
+    });
+  }
 
   //пассивный доход
   const sumPass = sumRealty + sumBusiness;
-  document.querySelector(".output-passive-income").textContent = sumPass;
+  console.log('sumPass: ', sumPass)
+  document.querySelector(".passive-income-output").textContent = sumPass;
 
   //заработок
   const inputIncome =
@@ -82,80 +91,20 @@ export function updateOutput() {
   //   console.log("Поздравляю!"); // Тут попап сделать
   // }
 }
-}
 
 //Перекрытие расходов
-export function clearExpenses() {
-  const buttonFields = document.querySelectorAll(".button-field-input-js");
+export function clearExpenses(type = 'input', buttonFieldsClass = '.button-field-input-js') {
+  const buttonFields = document.querySelectorAll(buttonFieldsClass);
   buttonFields.forEach((input) => {
     input.addEventListener("click", () => {
       const inputWithType = input.parentNode.querySelector("input[data-type]");
-      console.log("inputWithType:" + inputWithType)
       const dataTypeName = inputWithType.getAttribute("data-type");
-      console.log("dataTypeName:" + dataTypeName)
       inputWithType.value = 0;
       document
         .querySelector(".expenses")
-        .querySelector("input[data-type=" + dataTypeName + "]").value = 0;
-      updateOutput();
-    });
-  });
-
-  //для кредита банка, т.к. он output
-  const buttonField = document.querySelectorAll(".button-field-input-8");
-  buttonField.forEach((input) => {
-    input.addEventListener("click", () => {
-      const outputWithType = input.parentNode.querySelector("input[data-output]");
-      console.log("inputWithType:" + outputWithType)
-      const dataType = outputWithType.getAttribute("data-output");
-      console.log("dataType:" + dataType)
-      outputWithType.value = 0;
-      document
-        .querySelector(".expenses")
-        .querySelector("output[data-output=" + dataType + "]").value = 0;
-    });
-  });
-}
-
-//Кнопки очистки Активов
-export function clearAssets() {
-  const buttonFieldActive = document.querySelectorAll(
-    ".button-field-input-active"
-  );
-  buttonFieldActive.forEach((input) => {
-    input.addEventListener("click", () => {
-      const column = input.parentNode.querySelector("input[data-type]");
-      if (window.location.pathname === '/index.html') {
-      const column_1 = column.getAttribute("data-type");
-      document
-        .querySelector(".assets")
-        .querySelector("input[data-type=" + column_1 + "]").value = 0;
-
-      const fieldContainer = input.closest(".field");
-      const column_2 = fieldContainer.querySelector("input[data-type_2]");
-      column_2.value = 0;
-
-      const column_3 = fieldContainer.querySelector("input[data-type_3]");
-      column_3.value = 0;
-      }
+        .querySelector(type + "[data-type=" + dataTypeName + "]").value = 0;
       updateOutput();
     });
   });
 }
 
-export function clearIncome() {
-  const buttonIncome = document.querySelectorAll(".button-field-input-income");
-  buttonIncome.forEach((input) => {
-    input.addEventListener("click", () => {
-      const inputIncome = input.parentNode.querySelector("input[data-type]");
-      console.log("inputIncome: ", inputIncome);
-      inputIncome.value = 0;
-
-      const NameIncome = input.closest(".field");
-      console.log("fieldContainer: ", NameIncome);
-      const columnName = NameIncome.querySelector("input[data-type]");
-      columnName.value = "";
-      updateOutput();
-    });
-  });
-}

@@ -72,7 +72,7 @@
   border: 0px;
   font-size: 20px;
   border-bottom: 2px solid black;
-  margin-top: 25px;
+  /* margin-top: 25px; */
   text-align: center;
   justify-content: center;
 }
@@ -324,4 +324,8 @@
   align-items: center;
 }
 
+
+.block_2 {
+  margin-bottom: 25px;
+}
 
