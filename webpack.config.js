@@ -1,16 +1,17 @@
 const path = require('path'); // подключаем path к конфигу вебпак
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // подключите плагин
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // подключили плагин 
+
+// подключите к проекту mini-css-extract-plugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); 
 
-const isProduction = process.env.NODE_ENV === 'production'; // проверяем, какой режим сборки
 
 module.exports = {
   entry: { main: './src/index.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
-        publicPath: '/'
+        publicPath: ''
   },
   mode: 'development', // добавили режим разработчика
   devServer: {
@@ -54,10 +55,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      filename: 'index.html' // keep this one as is
+      template: 'src/index.html'
     }),
     new CleanWebpackPlugin(),
-    new MiniCssExtractPlugin()
-  ]
+    new MiniCssExtractPlugin() // подключение плагина для объединения файлов
+  ] 
 }; 
