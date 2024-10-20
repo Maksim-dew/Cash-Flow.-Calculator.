@@ -7,10 +7,12 @@ export function newPass () {
 const PassElem = oldPassElem.querySelector(".old-pass").value;
 const newPass = PassElem * 100;
 
-document.querySelector('.output-new-pass').textContent = newPass;
-document.querySelector('.output-new-win-pass').textContent = newPass;
+const newWinPass = 0;
 
-const WinPass = newPass + 50000;
+document.querySelector('.output-new-pass').textContent = newPass;
+document.querySelector('.output-new-win-pass').textContent = newWinPass;
+
+const WinPass = newWinPass + 50000;
 document.querySelector('.output-win-pass').textContent = WinPass;
 
 }

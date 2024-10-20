@@ -113,7 +113,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   newPass ();
 });
-
-
-  // updateOutput();
-
