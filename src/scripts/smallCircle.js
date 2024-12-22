@@ -1,5 +1,3 @@
-// const assets = document.querySelector(".assets");
-
 export function updateOutput() {
   const income = document.querySelector(".income");
   if (!income) {
@@ -107,4 +105,3 @@ export function clearExpenses(type = 'input', buttonFieldsClass = '.button-field
     });
   });
 }
-

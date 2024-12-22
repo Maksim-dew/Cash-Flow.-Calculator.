@@ -5,13 +5,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // подклю�
 // подключите к проекту mini-css-extract-plugin
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); 
 
-
 module.exports = {
   entry: { main: './src/index.js' },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
-        publicPath: '/Cash-Flow.Calculator/' // 
+        publicPath: '/Cash-Flow.Calculator/' // чтобы работала разработка нужно '/', чтобы работал прод нужно /Cash-Flow.Calculator/
   },
   mode: 'development', // добавили режим разработчика
   devServer: {

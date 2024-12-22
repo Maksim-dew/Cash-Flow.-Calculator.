@@ -12,7 +12,6 @@ inputsBusiness.forEach((input) => {
 });
 }
 
-
 //kids
 const inputsExpenses = document.querySelectorAll('input[name="name-expenses"]');
 inputsExpenses.forEach((input) => {
@@ -28,7 +27,6 @@ const inputText = document.querySelectorAll('input[type="text"]');
 inputText.forEach((input) => {
   input.addEventListener("change", updateOutput);
 });
-
   
 function setData(data = {}, field = 'JSON') {
   localStorage.setItem(field, JSON.stringify(data));
